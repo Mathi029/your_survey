@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathi_Survey_Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a5307c;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            
+        }
+        header {
+            background-color:#F2D0A4;
+            color: #a5307c;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+        .logo img{
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+
+        nav ul li a {
+            color: #a5307c;
+            text-decoration: none;
+            font-family: serif;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .survey-form {
+            background-color: #F2D0A4;
+            color: #a5307c;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            max-width: 800px;
+            
+        }
+        p{
+            font-family: serif;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        h1 {
+            margin-top: 0;
+            font-family: serif;
+            font-size: 50px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+           background-color: #a5307c;
+            color: #ffffff;
+            border: 2px solid #a5307c;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        button {
+            background-color: #a5307c;
+            color: white;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .progress {
+            background-color: #8b1ed3;
+            height: 100%;
+            width: 60%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #F2D0A4;
+            color: #870058;
+            font-weight: bolder;
+            text-align: center;
+            padding: 1px
+            
+        }
+        @media (max-width: 768px) {
+            .survey-form {
+                width: 90%;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: left;
+                
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="pngegg.png" alt="Logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="survey-form">
+            <h1>Survey Form</h1>
+            <p>Feel free to answer the questions below based on your own experience and opinion. If you are not convenient in answering a particular question please skip it by answering "No". Every answer would be very appreciated. Thank you for your time.</p>
+            
+            <form>
+                    <div class="form-group">
+                        <label for="text">Your Name</label>
+                        <input type="text" id="text" name="text" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Your Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="location">Where Do You Live?</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select</option>
+                            <option value1="">value1</option>
+                            <option value2="">value2</option>
+                            <option value3="">value3</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Age</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="age" value="20-30" checked> 20-30</label>
+                            <label><input type="radio" name="age" value="31-40"> 31-40</label>
+                            <label><input type="radio" name="age" value="41-50"> 41-50</label>
+                            <label><input type="radio" name="age" value="51+"> 51+</label>
+                            <label><input type="radio" name="age" value="prefer-not-to-say"> Prefer not to say</label>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Would You Consider Yourself To Have A Disability?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="disability" value="yes"> Yes</label>
+                            <label><input type="radio" name="disability" value="no" checked> No</label>
+                            <label><input type="radio" name="disability" value="prefer-not-to-say"> Prefer not to say</label>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Have You Ever Searched For An Apartment Before?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="searched-apartment" value="yes"> Yes</label>
+                            <label><input type="radio" name="searched-apartment" value="no" checked> No</label>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="expectations">What do you expect when there is a reason to find an apartment on the website? Please be elaborate.</label>
+                        <textarea id="expectations" name="expectations" rows="4"></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="challenges">What are some of the challenges you may face when you find an apartment on the website?</label>
+                        <textarea id="challenges" name="challenges" rows="4"></textarea>
+                    </div>
+        
+                    <button type="submit">Submit Form</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Survey Company. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('text');
+    const phoneInput = document.getElementById('phone');
+    const locationSelect = document.getElementById('location');
+    const expectationsTextarea = document.getElementById('expectations');
+    const challengesTextarea = document.getElementById('challenges');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            showConfirmationPopup();
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+
+        // Validate name (letters only)
+        if (!/^[A-Za-z\s]+$/.test(nameInput.value.trim())) {
+            alert('Please enter a valid name (letters only)');
+            isValid = false;
+        }
+
+        // Validate phone number (simple validation for demonstration)
+        if (!/^\d{10}$/.test(phoneInput.value.trim())) {
+            alert('Please enter a valid 10-digit phone number');
+            isValid = false;
+        }
+
+        // Check if location is selected
+        if (locationSelect.value === '') {
+            alert('Please select a location');
+            isValid = false;
+        }
+
+        // Check if a radio button is selected for age and disability
+        if (!document.querySelector('input[name="age"]:checked')) {
+            alert('Please select an age group');
+            isValid = false;
+        }
+
+        if (!document.querySelector('input[name="disability"]:checked')) {
+            alert('Please answer the disability question');
+            isValid = false;
+        }
+
+        if (!document.querySelector('input[name="searched-apartment"]:checked')) {
+            alert('Please answer if you have searched for an apartment before');
+            isValid = false;
+        }
+
+        // Check if textareas are filled
+        if (expectationsTextarea.value.trim() === '') {
+            alert('Please fill out your expectations');
+            isValid = false;
+        }
+
+        if (challengesTextarea.value.trim() === '') {
+            alert('Please fill out the challenges you may face');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function showConfirmationPopup() {
+        const popup = document.createElement('div');
+        popup.style.position = 'fixed';
+        popup.style.left = '50%';
+        popup.style.top = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.backgroundColor = '#F2D0A4';
+        popup.style.padding = '20px';
+        popup.style.borderRadius = '10px';
+        popup.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        popup.style.zIndex = '1000';
+        popup.style.color = '#a5307c';
+        popup.style.fontWeight = 'bold';
+        popup.style.fontSize = '18px';
+        popup.textContent = 'Thank you for submitting the survey!';
+
+        document.body.appendChild(popup);
+
+        setTimeout(() => {
+            popup.remove();
+            form.submit(); // Actually submit the form
+        }, 3000);
+    }
+});
+    </script>
+</body>
+</html>
